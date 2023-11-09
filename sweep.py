@@ -3,11 +3,48 @@
 # We are assuming that we are only checking interior blocks for now
 # Return value should be a string that says either Valid or Invalid (with some hints as to why it's invlaid)
 def validate( block_data ):
-  # Check whether the centre block is a bomb, a number, or an invalid input
-  # Skip bombs, send an error on invalid input, verify numbers
+  count = 0
+  if block_data[0][0] == -1:
+    count = count + 1
+  else:
+    count = count + 0
+  if block_data[0][1] == -1:
+    count = count + 1
+  else:
+    count = count + 0
+  if block_data[0][2] == -1:
+    count = count + 1
+  else:
+    count = count + 0
+  if block_data[1][0] == -1:
+    count = count + 1
+  else:
+    count = count + 0
+  if block_data[1][1] == -1:
+    count = count + 1
+  else:
+    count = count + 0
+  if block_data[1][2] == -1:
+    count = count + 1
+  else:
+    count = count + 0
+  if block_data[2][0] == -1:
+    count = count + 1
+  else:
+    count = count + 0
+  if block_data[2][1] == -1:
+    count = count + 1
+  else: 
+    count = count + 0
+  if block_data[2][2] == -1:
+    count = count + 1
+  else:
+    count = count + 0
 
-  return
-
+  if block_data[1][1] == count:
+    return "valid"
+  else:
+    return "invalid"
 
 grid = [
   [-1,1,0],
